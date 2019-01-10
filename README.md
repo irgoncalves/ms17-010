@@ -2,7 +2,8 @@
 This is a modified version of the [Worawit Wang: GitHub](https://github.com/worawit/MS17-010/) zzz_exploit for MS17-010.<br>
 It implements a few options such as username/password specification and an arbitrary command to be executed.<br>
 It does not change anything related to the SMB exploitation<br>
-This is a bundle with an executable and dependencies and DOES NOT require python install.
+This is a bundle with an executable and dependencies and DOES NOT require python install.<br>
+Built with Pyinstaller.
 
 # Usage
 
