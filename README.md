@@ -1,6 +1,7 @@
 # ms17-010
-This is a modified version of the Worawit Wang: GitHub zzz_exploit for MS17-010.<br>
-It implements a few options such as username/password specification and an arbitrary command to be executed.
+This is a modified version of the [Worawit Wang: GitHub](https://github.com/worawit/MS17-010/) zzz_exploit for MS17-010.<br>
+It implements a few options such as username/password specification and an arbitrary command to be executed.<br>
+This is a bundle with an executable and dependencies and DOES NOT require python install.
 
 # Usage
 
